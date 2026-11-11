@@ -1,0 +1,402 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  background-color: #f8fafc;
+  font-family: "Atkinson Hyperlegible Next", system-ui, sans-serif;
+}
+
+/* ================= CELULAR (base) ================= */
+
+/* CABEÇALHO */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 16px;
+  font-family: "Atkinson Hyperlegible Next", system-ui, sans-serif;
+  border-bottom: 1px solid #d2d5db;
+  background-color: #ffffff;
+}
+
+#logo {
+  max-height: 70px;
+  width: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+nav #abas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 8px 16px;
+}
+
+nav .linkNav {
+  text-decoration: none;
+  color: #52607a;
+  font-size: 1rem;
+  transition: 0.3s ease-in-out;
+}
+
+.linkNav:hover {
+  color: #110799;
+  text-decoration: underline;
+}
+
+.linkNav:active {
+  transform: scale(0.97);
+}
+
+#btnNav {
+  cursor: pointer;
+  min-width: 170px;
+  min-height: 46px;
+  padding: 6px 20px;
+  background-color: #1f7f73;
+  border-radius: 10px;
+  border: 3px solid transparent; /* borda sempre presente: o hover não muda o tamanho */
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: "Atkinson Hyperlegible Next", system-ui, sans-serif;
+  transition: 0.3s ease-in-out;
+}
+
+#btnNav:hover {
+  opacity: 0.85;
+  border-color: #54bdb0;
+  transform: translateY(-1px);
+}
+
+#btnNav:active {
+  transform: scale(0.97);
+}
+
+/* CHAT */
+
+#conversa {
+  width: calc(100% - 24px);
+  min-height: 480px;
+  margin: 16px auto;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 2px solid #dde3ee;
+}
+
+#chatDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  padding: 20px 14px 16px;
+}
+
+#assistenteNome {
+  color: #000000;
+  font-size: 1.5rem;
+}
+
+/* Balões de mensagem */
+
+.perguntaEx,
+.msg-digitada {
+  align-self: flex-end;
+  max-width: 92%;
+  padding: 12px 14px;
+  font-family: "Poppins", system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: left;
+  overflow-wrap: anywhere;
+  background-color: #2f64ce; /* contraste 5,5:1 com texto branco */
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+.msg-digitada[hidden] {
+  display: none;
+}
+
+.perguntaIA,
+.respostaIA {
+  align-self: flex-start;
+  max-width: 100%;
+  padding: 12px 14px;
+  font-family: "Poppins", system-ui, sans-serif;
+  font-weight: 420;
+  text-align: left;
+  overflow-wrap: anywhere;
+  background-color: #acbdca80;
+  color: #000000;
+  border-radius: 8px;
+}
+
+.perguntaIA {
+  font-size: 1.0625rem;
+}
+
+.respostaIA {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.txtIA {
+  line-height: 1.25;
+  font-weight: 400;
+  list-style: none;
+}
+
+.versaoEx {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 14px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+#tipoAdap {
+  color: #083285;
+  font-weight: 700;
+}
+
+.versDislexia {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  color: #2f64ce;
+}
+
+/* Botões */
+
+#btnBaixar,
+#btnEnviar {
+  cursor: pointer;
+  background-color: #2f64ce;
+  color: #ffffff;
+  font-family: "Poppins", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  transition: background-color 0.15s ease-in-out, transform 0.05s ease-in-out;
+}
+
+#btnBaixar:hover,
+#btnEnviar:hover {
+  background-color: #254fa5;
+}
+
+#btnBaixar:active,
+#btnEnviar:active {
+  transform: scale(0.97);
+}
+
+/* Campo de envio */
+
+.questInput {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+#perguntaCaixa {
+  flex: 1;
+  min-width: 0;
+  padding: 10px;
+  border: solid 1px #808080;
+  border-radius: 8px;
+  color: #333333;
+  font-size: 1rem;
+  transition: background 0.2s ease-in-out;
+}
+
+#perguntaCaixa:focus {
+  background-color: rgba(129, 129, 129, 0.1);
+}
+
+#mensagem-aviso {
+  min-height: 1.5em;
+  color: #b00020;
+  font-size: 1rem;
+}
+
+/* Foco visível para teclado */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #110799;
+  outline-offset: 2px;
+}
+
+/* ================= TABLET (a partir de 768px) ================= */
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 95px;
+    padding: 0 24px;
+  }
+
+  nav {
+    width: auto;
+  }
+
+  nav #abas {
+    justify-content: flex-end;
+    gap: 10px 18px;
+  }
+
+  #btnNav {
+    min-width: 180px;
+    min-height: 48px;
+    font-size: 1.15rem;
+  }
+
+  #conversa {
+    width: calc(100% - 48px);
+    min-height: 560px;
+    margin: 32px auto;
+    max-width: 1000px;
+  }
+
+  #chatDiv {
+    gap: 16px;
+    padding: 24px 20px 20px;
+  }
+
+  #assistenteNome {
+    font-size: 1.875rem;
+  }
+
+  .perguntaEx,
+  .msg-digitada {
+    max-width: 80%;
+    padding: 16px 20px;
+    font-size: 1.0625rem;
+  }
+
+  .perguntaIA,
+  .respostaIA {
+    max-width: 90%;
+    padding: 16px 20px;
+  }
+
+  .perguntaIA {
+    font-size: 1.125rem;
+  }
+
+  .respostaIA {
+    gap: 16px;
+  }
+
+  .versaoEx {
+    padding: 20px;
+  }
+
+  .versDislexia {
+    font-size: 1.375rem;
+  }
+
+  #btnBaixar,
+  #btnEnviar {
+    padding: 12px 24px;
+    font-size: 1.125rem;
+  }
+
+  .questInput {
+    gap: 10px;
+    margin-top: 14px;
+  }
+
+  #perguntaCaixa {
+    padding: 12px;
+    font-size: 1.125rem;
+  }
+}
+
+/* ================= PC (a partir de 1024px) ================= */
+@media (min-width: 1024px) {
+  header {
+    padding: 0 35px 0 30px;
+  }
+
+  nav #abas {
+    gap: 20px;
+  }
+
+  nav .linkNav {
+    font-size: 1.03rem;
+  }
+
+  #btnNav {
+    min-width: 200px;
+    min-height: 50px;
+    font-size: 1.25rem;
+  }
+
+  #conversa {
+    width: calc(100% - 40px);
+    min-height: 600px;
+    margin: 60px auto;
+  }
+
+  #chatDiv {
+    padding: 30px 24px 24px;
+  }
+
+  #assistenteNome {
+    font-size: 2.1875rem;
+  }
+
+  .perguntaEx,
+  .msg-digitada {
+    max-width: 500px;
+    font-size: 1.125rem;
+  }
+
+  .perguntaIA {
+    max-width: 600px;
+    font-size: 1.1875rem;
+  }
+
+  .respostaIA {
+    max-width: 750px;
+  }
+
+  .versDislexia {
+    font-size: 1.5rem;
+  }
+
+  #perguntaCaixa {
+    font-size: 1.25rem;
+  }
+}

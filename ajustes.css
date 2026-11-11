@@ -1,0 +1,216 @@
+/* Link este arquivo em TODAS as páginas, depois do CSS próprio de cada uma. */
+
+/* ESPAÇAMENTO AMPLO */
+.amplo {
+  line-height: 1.9;
+  letter-spacing: 0.05em;
+  word-spacing: 0.16em;
+}
+.amplo button,
+.amplo input {
+  letter-spacing: inherit;
+  word-spacing: inherit;
+}
+
+/* MENOS MOVIMENTO */
+.sem-movimento * {
+  transition: none !important;
+  animation: none !important;
+}
+.sem-movimento *:hover {
+  transform: none !important;
+}
+
+/* DESTACAR O TAB */
+.foco-forte :focus {
+  outline: 4px solid #1a56c4;
+  outline-offset: 3px;
+}
+.escuro.foco-forte :focus {
+  outline-color: #7fb0ff;
+}
+.contraste.foco-forte :focus {
+  outline-color: #ffe600;
+}
+
+/* TEMA ESCURO (o que é igual em todas as páginas: fundo, cabeçalho e rodapé) */
+.escuro {
+  background-color: #14171f;
+  color: #e8eaf0;
+}
+.escuro header {
+  border-color: #2c3140;
+}
+.escuro #nomeProjeto {
+  color: #e8eaf0;
+}
+.escuro .linkNav {
+  color: #a3aab8;
+}
+.escuro .linkNav:hover {
+  color: #7fb0ff;
+}
+.escuro footer {
+  background-color: #1c2029;
+  border-color: #2c3140;
+  color: #e8eaf0;
+}
+
+/* TEMA ALTO CONTRASTE (o que é igual em todas as páginas) */
+.contraste {
+  background-color: #000000;
+  color: #ffffff;
+}
+.contraste header {
+  border-color: #ffffff;
+}
+.contraste #nomeProjeto {
+  color: #ffffff;
+}
+.contraste .linkNav {
+  color: #ffffff;
+}
+.contraste .linkNav:hover {
+  color: #ffe600;
+}
+.contraste #btnNav {
+  background-color: #ffe600;
+  color: #000000;
+}
+.contraste footer {
+  background-color: #000000;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+/* ================= TEMA ESCURO ================= */
+
+/* cabeçalho: só troca fundo, borda e links; o botão verde continua igual */
+.escuro header {
+  background-color: #1c2029;
+  border-bottom-color: #2c3140;
+}
+.escuro nav .linkNav {
+  color: #a3aab8;
+}
+.escuro .linkNav:hover {
+  color: #7fb0ff;
+}
+
+/* quadro do chat */
+.escuro #conversa {
+  background-color: #1c2029;
+  border-color: #2c3140;
+}
+.escuro #assistenteNome {
+  color: #e8eaf0;
+}
+
+/* balão do assistente */
+.escuro .perguntaIA,
+.escuro .respostaIA {
+  background-color: #2a2f3c;
+  color: #e8eaf0;
+}
+
+/* cartão da versão adaptada */
+.escuro .versaoEx {
+  background-color: #14171f;
+}
+.escuro #tipoAdap {
+  color: #9ec1ff;
+}
+.escuro .versDislexia {
+  color: #8fb4ff;
+}
+
+/* campo de envio */
+.escuro #perguntaCaixa {
+  background-color: #14171f;
+  color: #e8eaf0;
+  border-color: #4a5163;
+}
+.escuro #perguntaCaixa::placeholder {
+  color: #a3aab8;
+}
+.escuro #perguntaCaixa:focus {
+  background-color: #232836;
+}
+.escuro #mensagem-aviso {
+  color: #ff8a9b;
+}
+
+/* foco do teclado visível no fundo escuro */
+.escuro a:focus-visible,
+.escuro button:focus-visible,
+.escuro input:focus-visible {
+  outline-color: #7fb0ff;
+}
+
+/* ================= ALTO CONTRASTE ================= */
+
+.contraste header {
+  background-color: #000;
+  border-bottom: 2px solid #fff;
+}
+.contraste nav .linkNav {
+  color: #fff;
+}
+.contraste .linkNav:hover {
+  color: #ffe600;
+}
+.contraste #btnNav,
+.contraste #btnBaixar,
+.contraste #btnEnviar {
+  background-color: #ffe600;
+  color: #000;
+}
+
+.contraste #conversa {
+  background-color: #000;
+  border-color: #fff;
+}
+.contraste #assistenteNome {
+  color: #fff;
+}
+
+.contraste .perguntaIA,
+.contraste .respostaIA {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+}
+.contraste .perguntaEx,
+.contraste .msg-digitada {
+  background-color: #ffe600;
+  color: #000;
+}
+
+.contraste .versaoEx {
+  background-color: #000;
+  border: 2px solid #fff;
+}
+.contraste #tipoAdap {
+  color: #ffe600;
+}
+.contraste .versDislexia {
+  color: #fff;
+}
+
+.contraste #perguntaCaixa {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+}
+.contraste #perguntaCaixa::placeholder {
+  color: #fff;
+}
+.contraste #mensagem-aviso {
+  color: #ff9aa8;
+}
+
+.contraste a:focus-visible,
+.contraste button:focus-visible,
+.contraste input:focus-visible {
+  outline-color: #ffe600;
+}

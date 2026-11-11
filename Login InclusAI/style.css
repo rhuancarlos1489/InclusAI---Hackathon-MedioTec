@@ -1,0 +1,356 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ================= CELULAR (base) ================= */
+
+/* CABEÇALHO */
+
+header {
+    display: flex;
+    width: 100%;
+    min-height: 95px;
+    font-family: "Atkinson Hyperlegible Next", system-ui, sans-serif;
+    background-color: #0E2A63;
+}
+
+#nomeProjeto {
+    cursor: default;
+    display: flex;
+    margin: 50px 30px 30px 30px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* BODY */ 
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#chamadaLogin {
+    display: flex;
+    flex-direction: column;
+    background-color: #0E2A63;
+    min-height: 520px;
+    width: 100%;
+}
+
+.tituloDiv {
+    margin: 160px 20px 0px 20px;
+    font-family: 'Poppins', system-ui, sans-serif;
+    color: #ececec;
+}
+
+.detalhesP {
+    display: flex;
+    text-align: left;
+    margin: 0 10px 10px 20px;
+    color: #ececec;
+    font-family: 'Poppins', system-ui, sans-serif;
+}
+
+.tituloLogin {
+    margin: 20px 20px 0px 40px;
+    font-family: 'Poppins', system-ui, sans-serif;
+    color: #000000;
+}
+
+/* ESPAÇO LOGIN */
+
+#espaçoLogin {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: flex;
+    font-family: 'Poppins', system-ui, sans-serif;
+    color: #000000;
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 10px 10px 0 10px;
+}
+
+input {
+    margin: 10px 10px 10px 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #0E2A63;
+    width: 350px;
+}
+
+input::placeholder {
+    color: #b1b1b1;
+}
+
+button {
+    border: none;
+    background-color: #ffffff;
+}
+
+#mensagem-aviso {
+  font-family: 'Poppins', system-ui, sans-serif;
+  display: flex;
+  transform: translateY(-140px);
+  margin: 10px;
+  color: #ff0000;
+  font-size: 0.8125rem;
+}
+
+#conexao {
+    display: flex;
+    width: 50px;
+    margin: -18px 0px 20px 0px;
+    transform: translateX(310px);
+}
+
+#btnEntrar {
+    cursor: pointer;
+    background-color: #3875ee;
+    color: #ffffff;
+    font-family: "Poppins", system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 1.125rem;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    margin-right: 2px;
+    margin: 0 2px 10px 35px;
+    width: 300px;
+    transition: 0.02s ease-in-out;
+}
+  
+#btnEntrar:hover {
+    background-color: #2f64ce;
+}
+  
+#btnEntrar:active {
+    font-size: 1.1562rem;
+}
+
+#divAdicionais {
+    display: flex;
+    gap: 170px;
+    margin-left: 3px;
+}
+
+.adicionais {
+    cursor: pointer;
+    color: #2F6FDB;
+    font-family: "Poppins", system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+/* ================= TABLET (a partir de 768px) ================= */
+@media (min-width: 768px) {
+
+    header {
+        min-height: 100px;
+    }
+
+    #nomeProjeto {
+        margin: 55px 30px 30px 20%;
+        font-size: 1.5625rem;
+    }
+
+    #chamadaLogin {
+        min-height: 560px;
+    }
+
+    .tituloDiv {
+        margin: 180px 20% 0px 20%;
+    }
+
+    .detalhesP {
+        margin: 0 20% 10px 20%;
+    }
+
+    .tituloLogin {
+        margin: 30px 20px 0px 20%;
+    }
+
+    label {
+        font-size: 1.0625rem;
+        margin: 14px 10px 0 20%;
+    }
+
+    input {
+        margin: 10px 10px 12px 20%;
+        padding: 12px;
+        width: 60%;
+    }
+
+    #conexao {
+        margin: -18px 0px 20px 74%;
+        transform: translateX(0px);
+    }
+
+    #btnEntrar {
+        font-size: 1.1875rem;
+        padding: 12px;
+        margin: 0 2px 10px 22%;
+        width: 56%;
+    }
+
+    #btnEntrar:active {
+        font-size: 1.2188rem;
+    }
+
+    #divAdicionais {
+        gap: 36%;
+        margin-left: 20%;
+    }
+
+    .adicionais {
+        cursor: pointer;
+        font-size: 0.875rem;
+    }
+
+    #mensagem-aviso {
+        margin-left: 155px;
+        transform: translateY(-160px);
+    }
+}
+
+/* ================= PC (a partir de 1024px) ================= */
+@media (min-width: 1024px) {
+
+    header {
+        min-height: 110px;
+    }
+
+    #nomeProjeto {
+        margin: 60px 30px 30px 10%;
+    }
+
+    #chamadaLogin {
+        min-height: 450px;
+    }
+
+    .tituloDiv {
+        font-size: 3.125rem;
+        line-height: 1;
+        margin: 200px 32.5% 0px 32.5%;
+    }
+
+    .detalhesP {
+        margin: 0 32.5% 10px 32.5%;
+    }
+
+    .tituloLogin {
+        margin: 40px 20px 0px 32.5%;
+    }
+
+    label {
+        font-size: 1.125rem;
+        margin: 16px 10px 0 12.5%;
+    }
+
+    input {
+        margin: 12px 10px 14px 12.5%;
+        padding: 14px;
+        width: 75%;
+    }
+
+    #conexao {
+        margin: -18px 0px 20px 44%;
+        transform: translateX(0px);
+    }
+
+    #btnEntrar {
+        font-size: 1.25rem;
+        padding: 14px;
+        margin: 0 2px 10px 27.5%;
+        width: 50%;
+    }
+
+    #btnEntrar:active {
+        font-size: 1.2812rem;
+    }
+
+    #divAdicionais {
+        gap: 57%;
+        margin-top: 10px;
+        margin-left: 12.5%;
+    }
+
+    .adicionais {
+        cursor: pointer;
+        font-size: 0.9375rem;
+    }
+
+    #mensagem-aviso {
+        transform: translateY(-180px);
+        margin-left: 128px;
+    }
+}
+
+/* ================= TEMAS ================= */
+
+/* ESCURO */
+.escuro label,
+.escuro .tituloLogin {
+  color: #e8eaf0;
+}
+
+.escuro input {
+  background-color: #1c2029;
+  color: #e8eaf0;
+  border-color: #5b6472;
+}
+
+.escuro input::placeholder {
+  color: #7d8596;
+}
+
+.escuro button {
+  background-color: #14171f;
+}
+
+.escuro .adicionais {
+  color: #7fb0ff;
+}
+
+/* ALTO CONTRASTE */
+.contraste header {
+  background-color: #000000;
+}
+
+.contraste #chamadaLogin {
+  background-color: #000000;
+  border-bottom: 2px solid #ffffff;
+}
+
+.contraste label,
+.contraste .tituloLogin {
+  color: #ffffff;
+}
+
+.contraste input {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.contraste input::placeholder {
+  color: #d0d0d0;
+}
+
+.contraste button {
+  background-color: #000000;
+}
+
+.contraste .adicionais {
+  color: #ffe600;
+}
+
+.contraste #btnEntrar {
+  background-color: #ffe600;
+  color: #000000;
+}

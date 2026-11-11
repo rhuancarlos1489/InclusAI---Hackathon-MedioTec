@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../ajustes.css" />
+    <link rel="icon" href="../icone/inclusai-icon.png">
+    <title>Assistente IA</title>
+</head>
+<body>
+    <header>
+        <img src="../icone/inclusai-icon.png" alt="Logo da InclusAI" id="logo">
+      <nav>
+        <ul id="abas">
+          <li><a href="../Home/index.html" class="linkNav">Início</a></li>
+          <li><a href="../Acessibilidade/acessibilidade.html" class="linkNav">Acessibilidade</a></li>
+          <li><a href="../Para quem foi feito/paraquem.html" class="linkNav">Para quem foi feito</a></li>
+          <li><a href="#" class="linkNav">Assistente</a></li>
+          <a href="../Login InclusAI/login.html"><button id="btnNav">Começar agora!</button></a>
+        </ul>
+      </nav>
+    </header>
+    <section id="conversa" >
+        <div id="chatDiv">
+            <h3 id="assistenteNome">Assistente InclusAI</h3>
+            <div class="perguntaIA">
+                <p class="txtIA">
+                    Oi! Qual material você quer adaptar? Pode colar o texto aqui ou enviar o arquivo.
+                </p>
+            </div>
+            <p class="perguntaEx">Um texto de ciências do 7º ano. Tenho um aluno com dislexia e outro com TDAH.</p>
+            <!-- RESPOSTA DO ASSISTENTE: -->
+            <div class="respostaIA">
+                <p class="txtIA">Preparei a versão para o aluno com dislexia. A do aluno com TDAH vem em seguida.</p>
+                <div class="versaoEx">
+                    <p id="tipoAdap">Aluno com dislexia</p>
+                    <p class="versDislexia">
+                        As plantas usam a luz do sol para fazer o próprio alimento.
+                        <br>
+                        Elas pegam gás carbônico do ar e água da terra.
+                        <br>
+                        Com a luz, transformam os dois em açúcar.
+                    </p>
+                </div>
+                <button id="btnBaixar">Baixar esta versão</button>
+            </div>
+            <div class="msg-digitada" hidden></div>
+            <div class="questInput">
+                <input type="text" id="perguntaCaixa" name="chatbox" placeholder="Pergunte algo...">
+                <button id="btnEnviar" onclick="enviar()">Enviar</button>
+            </div>
+            <div id="mensagem-aviso">
+            </div>
+        </div>
+    </section>
+    <script src="../Acessibilidade/js-ajustes.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

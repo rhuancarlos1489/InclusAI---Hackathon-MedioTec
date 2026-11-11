@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../icone/inclusai-icon.png"> 
+    <title>Acessibilidade</title>
+  </head>
+  <body>
+    <header>
+      <img src="../icone/inclusai-icon.png" alt="Logo da InclusAI" id="logo">
+      <nav>
+        <ul id="abas">
+          <li><a href="../Home/index.html" class="linkNav">Início</a></li>
+          <li><a href="#" class="linkNav">Acessibilidade</a></li>
+          <li><a href="../Para quem foi feito/paraquem.html" class="linkNav">Para quem foi feito</a></li>
+          <li><a href="../Chat com Assistente - exemplo/chat.html" class="linkNav">Assistente</a></li>
+          <a href="../Login InclusAI/login.html"><button id="btnNav">Começar agora!</button></a>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="acessibilidade">
+        <div class="cabecAcess">
+          <h2 id="hpAcess">Acessibilidade</h2>
+          <p id="descAcess">
+            Ajuste o inclusAI do seu jeito. O que você escolher aqui vale para o
+            site inteiro e <br />
+            fica salvo neste navegador.
+          </p>
+        </div>
+      </section>
+
+      <div class="conteudo">
+        <form id="funcionalidades" onsubmit="return false;">
+          <div class="linha">
+            <p class="funcoes">Tamanho do texto</p>
+            <div class="opcoes">
+              <label
+                ><input type="radio" name="tamanho" value="100" checked />
+                Padrão</label
+              >
+              <label
+                ><input type="radio" name="tamanho" value="115" /> Maior</label
+              >
+              <label
+                ><input type="radio" name="tamanho" value="130" /> Grande</label
+              >
+              <label
+                ><input type="radio" name="tamanho" value="160" /> Muito
+                grande</label
+              >
+            </div>
+          </div>
+
+          <div class="linha">
+            <div>
+              <p class="funcoes">Espaçamento</p>
+              <span class="ajuda"
+                >Mais espaço entre linhas, letras e palavras.</span
+              >
+            </div>
+            <div class="opcoes">
+              <label
+                ><input
+                  type="radio"
+                  name="espacamento"
+                  value="normal"
+                  checked
+                />
+                Normal</label
+              >
+              <label
+                ><input type="radio" name="espacamento" value="amplo" />
+                Amplo</label
+              >
+            </div>
+          </div>
+
+          <div class="linha">
+            <p class="funcoes">Cores</p>
+            <div class="opcoes">
+              <label
+                ><input type="radio" name="cores" value="padrao" checked />
+                Padrão</label
+              >
+              <label
+                ><input type="radio" name="cores" value="escuro" />
+                Escuro</label
+              >
+              <label
+                ><input type="radio" name="cores" value="contraste" /> Alto
+                contraste</label
+              >
+            </div>
+          </div>
+
+          <div class="linha">
+            <p class="funcoes">Movimento</p>
+            <div class="opcoes coluna">
+              <label
+                ><input type="checkbox" name="movimento" /> Menos
+                movimento</label
+              >
+              <span class="ajuda">Desliga transições e animações.</span>
+            </div>
+          </div>
+
+          <div class="linha">
+            <p class="funcoes">Teclado</p>
+            <div class="opcoes coluna">
+              <label
+                ><input type="checkbox" name="teclado" /> Destacar onde estou ao
+                apertar Tab</label
+              >
+              <span class="ajuda"
+                >Deixa mais forte a marcação do item selecionado.</span
+              >
+            </div>
+          </div>
+
+          <div class="linha">
+            <p class="funcoes">Texto</p>
+            <div class="opcoes coluna">
+              <label
+                ><input type="checkbox" name="simples" /> Linguagem
+                simples</label
+              >
+              <span class="ajuda"
+                >Mostra frases curtas e palavras do dia a dia, quando
+                houver.</span
+              >
+            </div>
+          </div>
+
+          <div class="rodape">
+            <button type="button" class="botaoLink" id="restaurar">
+              Restaurar padrão
+            </button>
+            <span>Salvo neste navegador.</span>
+          </div>
+        </form>
+
+        <aside id="comofica">
+          <h2 id="exAudio">Como fica</h2>
+          <div class="cartao">
+            <span class="ajuda">Trecho de ciências</span>
+            <div id="texto">
+              As plantas usam a luz do sol para fazer o próprio alimento. 
+              <br>
+              Elas pegam gás carbônico do ar e água da terra. Com a luz,
+              <br>
+              transformam os dois em açúcar.
+            </div>
+            <button type="button" class="botaoLink" id="ouvir">
+              Ouvir este texto
+            </button>
+            <button type="button" class="botaoLink" id="parar" hidden>
+              Parar áudio
+            </button>
+          </div>
+          <span class="ajuda nota"
+            >Os ajustes ao lado aparecem aqui na hora.</span
+          >
+        </aside>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

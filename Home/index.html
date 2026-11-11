@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../ajustes.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="../icone/inclusai-icon.png">
+    <title>InclusAI</title>
+  </head>
+  <body>
+    <header>
+      <img src="../icone/inclusai-icon.png" alt="Logo da InclusAI" id="logo">
+      <nav>
+        <ul id="abas">
+          <li><a href="#" class="linkNav">Início</a></li>
+          <li><a href="../Acessibilidade/acessibilidade.html" class="linkNav">Acessibilidade</a></li>
+          <li><a href="../Para quem foi feito/paraquem.html" class="linkNav">Para quem foi feito</a></li>
+          <li><a href="../Chat com Assistente - exemplo/chat.html" class="linkNav">Assistente</a></li>
+          <a href="../Login InclusAI/login.html"><button id="btnNav">Começar agora!</button></a>
+        </ul>
+      </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div id="apHero">
+                <h2 id="textoHero">Aqui, sua aula chega a todos os seus alunos.</h2>
+                <p id="pHero">O InclusAI ajuda você a adaptar provas, textos, slides e atividades para que cada aluno consiga acompanhar, no ritmo dele, do jeito que funciona para ele.</p>
+            </div>
+            <div id="servicos">
+                <div class="topicServicos">
+                    <p class="tiposServicos">Pergunte o que quiser</p>
+                    <p class="detalhamento">Descreva o material e a necessidade do aluno, em conversa.</p>
+                </div>
+                <div class="topicServicos">
+                    <p class="tiposServicos">Receba sugestões de provas, atividades e projetos.</p>
+                    <p class="detalhamento">Uma versão adaptada, com a explicação do que mudou e por quê.</p>
+                </div>
+                <div class="topicServicos">
+                    <p class="tiposServicos">Ajuste do seu jeito</p>
+                    <p class="detalhamento">Peça mudanças até ficar bom para a sua turma.</p>
+                </div>
+            </div>
+            <div class="btn-div">
+                <button id="btnIA" onclick="conversar()">Conversar com InclusAI</button>
+            </div>
+            <aside id="chatExemplo">
+                <h3 id="assistenteNome">Assistente InclusAI</h3>
+                <p class="perguntaEx">Como posso adaptar um texto de ciências para um aluno com dislexia?</p>
+                <!-- RESPOSTA DO ASSISTENTE: -->
+                <div class="respostaEx">
+                    <p>Boa pergunta! Algumas sugestões:</p>
+                    <ul>
+                        <li class="sugestoes">- Uma ideia por frase;</li>
+                        <li class="sugestoes">- Palavras do dia a dia no lugar de termos técnicos;</li>
+                        <li class="sugestoes">- Fonte maior e mais espaço entre as linhas;</li>
+                        <li class="sugestoes">- Destaque só as palavras-chave.</li>
+                    </ul>
+                </div>
+                <div class="msg-digitada" hidden></div>
+                <div class="questInput">
+                    <input type="text" id="perguntaCaixa" name="chatbox" placeholder="Pergunte algo...">
+                    <button id="btnEnviar" onclick="enviar()">Enviar</button>
+                </div>
+                <div id="mensagem-aviso">
+                </div>
+            </aside>
+        </section>
+        <section id="paraQuem">
+            <div class="cabecQuem">
+                <h2 id="hpQuem">Para quem é o InclusAI?</h2>
+                <p id="descQuem">Uma ferramenta pensada para cada pessoa envolvida na inclusão, com o que cada uma precisa.</p>
+            </div>
+            <div class="publicoAlvo">
+                <div class="publico">
+                    <h4 class="nomes">Professores</h4>
+                    <p>Adaptam provas, textos, slides e atividades em poucos minutos, sem começar do zero.</p>
+                </div>
+                <div class="publico">
+                    <h4 class="nomes">Coordenação e direção</h4>
+                    <p>Acompanham o que foi adaptado, para quem e por quê.</p>
+                </div>
+                <div class="publico">
+                    <h4 class="nomes">Famílias</h4>
+                    <p>Entendem como o material do filho foi ajustado e por que isso ajuda.</p>
+                </div>
+                <div class="publico">
+                    <h4 class="nomes">Alunos</h4>
+                    <p>Recebem o material no formato que funciona para eles.</p>
+                </div>
+            </div>
+        </section>
+        <section id="recursos">
+            <div>
+                <h2 id="hRec">Tudo o que você precisa em um só lugar!</h2>
+                <p class="recursos-descricao">Do texto da prova à descrição de uma imagem: cada adaptação, no mesmo lugar.</p>
+            </div>
+            <div class="setores">
+                <div class="setor">
+                    <h4 class="nome-setor">Provas e avaliações</h4>
+                    <p>Enunciados mais claros, mais tempo de leitura e questões divididas em partes.</p>
+                </div>
+                <div class="setor">
+                    <h4 class="nome-setor">Textos e leituras</h4>
+                    <p>Frases curtas, vocabulário explicado e formatação que facilita a leitura.</p>
+                </div>
+                <div class="setor">
+                    <h4 class="nome-setor">Slides e imagens</h4>
+                    <p>Descrições para alunos cegos ou com baixa visão, escritas para serem lidas em voz alta.</p>
+                </div>
+                <div class="setor">
+                    <h4 class="nome-setor">Atividades em sala</h4>
+                    <p>Passo a passo em etapas, com instruções objetivas e exemplos.</p>
+                </div>
+                <div class="setor">
+                    <h4 class="nome-setor">Aluno com dislexia</h4>
+                    <p>Fonte, espaçamento e frases pensados para quem lê com mais esforço.</p>
+                </div>
+                <div class="setor">
+                    <h4 class="nome-setor">Aluno com TDAH</h4>
+                    <p>Tarefas divididas em etapas curtas, cada uma com um fim claro.</p>
+                </div>
+                <div class="setor">
+                    <h4 class="nome-setor">Descrição de imagem</h4>
+                    <p>Texto objetivo sobre o que a imagem mostra, pronto para leitor de tela.</p>
+                </div>
+                <div class="setor">
+                    <h4 class="nome-setor">Ajuste com você</h4>
+                    <p>O inclusAI propõe, explica o que mudou e você decide o que fica.</p>
+                </div>
+            </div>
+        </section>
+        <section id="exemploModificacao">
+            <h2 id="hPEx">Veja um exemplo de adaptação:</h2>
+            <div id="materiais">
+                <div id="materialOriginal">
+                    <h5 class="tipo-material-original">Material original</h5>
+                    <p>A fotossíntese é o processo bioquímico mediante o qual organismos clorofilados convertem energia luminosa em energia química, sintetizando compostos orgânicos a partir de dióxido de carbono e água.</p>
+                </div>
+                <div id="materialAdaptado">
+                    <h5 class="tipo-material-adaptado">Material adaptado</h5>
+                    <p>As plantas usam a luz do sol para fazer o próprio alimento. Elas pegam gás carbônico do ar e água da terra. Com a luz, transformam os dois em açúcar.</p>
+                </div>
+            </div>
+        </section>
+        <section id="acessibilidade">
+            <h2 id="hAcss">Também é acessível para você!</h2>
+            <p id="acss-descricao">Um assistente de inclusão precisa ser inclusivo por inteiro. Por isso a plataforma se adapta a quem usa.</p>
+            <div class="cards">
+                <div class="card">
+                    <div>
+                        <p class="destacado">Leitura confortável.</p>
+                        <p>Bom contraste, espaçamento generoso e tamanho de letra ajustável.</p>
+                    </div>
+                    <img src="img/leitura.svg" alt="Ícone de leitura" class="ilustracoes">
+                </div>
+                <div class="card">
+                    <div>
+                        <p class="destacado">Leitores de tela.</p>
+                        <p>Estrutura e rótulos pensados para NVDA, VoiceOver e TalkBack.</p>
+                    </div>
+                    <img src="img/leitor-de-tela.svg" alt="Ícone de leitor de tela." class="ilustracoes">
+                </div>
+                <div class="card">
+                    <div>
+                        <p class="destacado">Painel de leitura.</p>
+                        <p>Tamanho do texto, espaçamento e contraste ajustáveis em qualquer tela.</p>
+                    </div>
+                    <img src="img/painel-de-leitura.svg" alt="Ícone de painel de leitura." class="ilustracoes">
+                </div>
+                <div class="card">
+                    <div>
+                        <p class="destacado">Uso pelo teclado.</p>
+                        <p>Todas as ações funcionam sem mouse, com foco sempre visível.</p>
+                    </div>
+                    <img src="img/uso-pelo-teclado.svg" alt="Ícone de uso pelo teclado." class="ilustracoes">
+                </div>
+                <div class="card">
+                    <div>
+                        <p class="destacado">Menos movimento.</p>
+                        <p>Respeitamos a preferência do seu dispositivo por animações reduzidas.</p>
+                    </div>
+                    <img src="img/menos-movimento.svg" alt="Ícone de menos movimento na tela." class="ilustracoes">
+                </div>
+                <div class="card">
+                    <div>
+                        <p class="destacado">Linguagem simples.</p>
+                        <p>Instruções curtas e sem termos técnicos desnecessários.</p>
+                    </div>
+                    <img src="img/linguagem-simples.svg" alt="Ícone de linguagem simples." class="ilustracoes">
+                </div>
+            </div>
+        </section>
+        <!--
+        <section id="sectCTA">
+            <div class="CTA">
+                <h2>Qual material você quer adaptar hoje?</h2>
+                <p>Comece pela atividade que está mais perto de acontecer. A conversa leva poucos minutos.</p>
+                <ul>
+                    <li>Começa em poucos minutos</li>
+                    <li>Você ajusta antes de usar</li>
+                    <li>Pensado para diversos públicos</li>
+                </ul>
+                <button>Conversar com o assistente!</button>
+            </div>
+        </section>
+        -->
+    </main>
+    <footer>
+        <p>InclusAI, pensado para a inclusão efetiva.</p>
+        <p>&copy; 2026 InclusAI | SENAC - MedioTec 1°B</p>
+    </footer>
+    <script src="../Acessibilidade/js-ajustes.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
