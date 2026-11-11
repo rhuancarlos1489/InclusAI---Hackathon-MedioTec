@@ -101,21 +101,6 @@ O CSS é feito primeiro para celular, com dois pontos de quebra:
 
 As fontes usam `rem`, para que o ajuste de tamanho do texto funcione.
 
-## Como criar uma nova página
-
-1. Linke o CSS da página e, **depois dele**, o `ajustes.css`:
-   ```html
-   <link rel="stylesheet" href="style.css" />
-   <link rel="stylesheet" href="../ajustes.css" />
-   ```
-2. No final do `<body>`, carregue o `ajustes-globais.js` antes do script da página:
-   ```html
-   <script src="../ajustes-globais.js"></script>
-   <script src="script.js"></script>
-   ```
-3. Use `rem` nos tamanhos de fonte.
-4. Se a página tiver elementos com cor própria, como fundos brancos fixos, crie regras para `.escuro` e `.contraste` no CSS dela, senão esses elementos não acompanham o tema.
-
 ## Estado atual
 
 - O assistente do chat é um **exemplo de interface**. Ainda não há integração com um modelo de IA.
